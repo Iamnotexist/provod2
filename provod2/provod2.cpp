@@ -89,6 +89,8 @@ provod2::provod2 (std::string __a) {
 
 		__zn += __d; //дополняю значение информацией из буффера
 	}
+	
+	this->_in.close(); //закрываю файл
 
 }
 
@@ -117,6 +119,8 @@ provod2::write() {
 			continue;
 		else
 			_provod2_sys::write(this->_out, it->second); //спускаюсь в вершину
+	
+	this->_out.close(); //закрываю файл
 
 }
 
