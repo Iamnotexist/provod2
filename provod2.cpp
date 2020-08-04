@@ -1,13 +1,13 @@
 #include "provod2.h"
 
 //определяю функцию для мнимого корня
-provod2::deleteVertex (std::string __a) {
+void provod2::deleteVertex (std::string __a) {
 	delete this->_tree->_vp[__a]; //удаляю вершину
 	this->_tree->_vp[__a] = nullptr; //ставлю нулевой указатель на место
 }
 
 //определяю функцию для вершины
-_provod2_sys::node::deleteVertex (std::string __a) {
+void _provod2_sys::node::deleteVertex (std::string __a) {
 	delete this->_vp[__a]; //удаляю вершину
 	this->_vp[__a] = nullptr; //ставлю нулевой казатель на место
 }
@@ -112,7 +112,7 @@ void _provod2_sys::write(std::ofstream &__out, _provod2_sys::node *__a) {
 
 //запись из мнимого корня
 
-provod2::write() {
+void provod2::write() {
 	this->_out.open(this->_file, std::ios_base::out | 
 			std::ios_base::trunc); //открываю файл для записи
 

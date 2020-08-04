@@ -1,4 +1,4 @@
-#include "provod2.h"
+#include "../provod2.h"
 #include <iostream>
 using namespace std;
 

@@ -19,7 +19,7 @@ namespace _provod2_sys {
 		node& operator[] (const std::string); //переопределяю оператор доступа и записи
 
 		std::vector<std::string> getVertex (); //возвращает вектор из всех детей данной вершины 
-		deleteVertex (std::string); //удаляет сына вершины 
+		void deleteVertex (std::string); //удаляет сына вершины 
 	};
 
 
@@ -39,13 +39,13 @@ public:
 	_provod2_sys::node& operator[] (const std::string); //переопределяю оператор доступа и записи
 
 	std::vector<std::string> getVertex (); //возвращает вектор из всех детей мнимого корня
-	deleteVertex (std::string); //удаляет сына мнимого корня
+	void deleteVertex (std::string); //удаляет сына мнимого корня
 
 	//конструктор по пути до файла или его названию
 	provod2 (std::string);
 
 	//записываю в файл новые данные
-	write ();
+	void write ();
 };
 
 #endif
